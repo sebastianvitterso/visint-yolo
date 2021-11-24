@@ -22,14 +22,14 @@ module load Python/3.8.6-GCCcore-10.2.0
 # module load PyTorch/1.7.1-fosscuda-2020b
 
 cd ..
-cd yolov5
 pwd
 pip install -r requirements.txt --no-cache-dir
 
 # Train from pretrained weights
-python train.py --img 1280 --batch 8 --epochs 300 --data car.yaml --weights yolov5l6.pt --cache --device 0
+python train.py --img 1280 --batch 4 --epochs 300 --data car.yaml --weights yolov5l6.pt --cache --device 0
 # Train from scratch
 # python train.py --img 1280 --batch 6 --epochs 300 --data sheep.yaml --weights '' --cfg yolov5l6.yaml --cache --device 0
 
 # python detect.py --weights yolov5s.pt --img 1024 --source ../data/test/
 
+uname -a
