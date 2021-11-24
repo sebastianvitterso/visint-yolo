@@ -6,7 +6,7 @@
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=1
 #SBATCH --mem=12000
-#SBATCH --job-name="YOLOv5 Training for sheep recognition"
+#SBATCH --job-name="YOLOv5 Training for a self driving car"
 #SBATCH --output=job.out
 #SBATCH --mail-user=sebastvi@stud.ntnu.no
 #SBATCH --mail-type=END
@@ -14,7 +14,6 @@
 WORKDIR=${SLURM_SUBMIT_DIR}
 cd ${WORKDIR} # /cluser/work/<username>/master-sau/slurm
 
-uname -a
 pip freeze --user | xargs pip uninstall -y
 module purge
 module load fosscuda/2020b
