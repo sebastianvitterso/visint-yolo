@@ -1,5 +1,8 @@
 preprocessing/data
 *.out
+*.tfrecord
+*.pth
+*.gif
 
 # Repo-specific GitIgnore ----------------------------------------------------------------------------------------------
 *.jpg
