@@ -2,22 +2,20 @@ import os
 from LabelSet import LabelSet
 
 # visint_labels = ['car', 'truck', 'bus', 'motorcycle', 'bicycle', 'scooter', 'person', 'rider']  # original
-visint_labels = ['car', 'truck', 'car', 'car', 'biker', 'biker', 'pedestrian', 'biker']  # revised, to only contain ones represented in udacity
+visint_labels = ['vehicle', 'vehicle', 'bus', 'vehicle', 'cyclist', 'cyclist', 'pedestrian', 'pedestrian']  # revised, to only contain ones represented in x704
 
-udacity_labels = ['biker', 'car', 'pedestrian', 'trafficLight', 'trafficLight-Green', 
-                  'trafficLight-GreenLeft', 'trafficLight-Red', 'trafficLight-RedLeft', 
-                  'trafficLight-Yellow', 'trafficLight-YellowLeft', 'truck'] 
+x704_labels = ['vehicle', 'pedestrian', 'construction', 'bus', 'cyclist']
 
 label_index_mapping = {}
 for visint_label_index, visint_label in enumerate(visint_labels):
-    udacity_label_index = udacity_labels.index(visint_label)
-    label_index_mapping[visint_label_index] = udacity_label_index
-    print(f'{visint_label} ({visint_label_index} -> {udacity_label_index})')
+    x704_label_index = x704_labels.index(visint_label)
+    label_index_mapping[visint_label_index] = x704_label_index
+    print(f'{visint_label} ({visint_label_index} -> {x704_label_index})')
 
 ######################################################################################################################
 
 INPUT_LABEL_FOLDER = './data/labels'
-OUTPUT_LABEL_FOLDER = './data/labels_for_udacity'
+OUTPUT_LABEL_FOLDER = './data/labels_for_x704'
 
 label_files = os.listdir(INPUT_LABEL_FOLDER)
 
