@@ -6,7 +6,7 @@
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=1
 #SBATCH --mem=12000
-#SBATCH --job-name="YOLOv5 Training for a self driving car"
+#SBATCH --job-name="AIR-yolo"
 #SBATCH --output=job.out
 #SBATCH --mail-user=sebastvi@stud.ntnu.no
 #SBATCH --mail-type=END
@@ -27,7 +27,7 @@ pip install -r requirements.txt --no-cache-dir
 # Train from pretrained weights
 python train.py --img 1280 --batch 4 --epochs 300 --data car.yaml --weights yolov5l6.pt --cache --device 0
 # Train from scratch
-# python train.py --img 1280 --batch 6 --epochs 300 --data sheep.yaml --weights '' --cfg yolov5l6.yaml --cache --device 0
+# python train.py --img 1280 --batch 4 --epochs 300 --data car.yaml --weights '' --cfg yolov5l6.yaml --cache --device 0
 
 # python detect.py --weights yolov5s.pt --img 1024 --source ../data/test/
 
