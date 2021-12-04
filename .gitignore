@@ -1,3 +1,6 @@
+preprocessing/data
+*.out
+
 # Repo-specific GitIgnore ----------------------------------------------------------------------------------------------
 *.tfrecord
 *.pth
